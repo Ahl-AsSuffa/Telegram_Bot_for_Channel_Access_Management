@@ -33,11 +33,11 @@ namespace Program
     }
     class Program
     {
-        static long groupId = -1002181162627, ChannelId = -1002272763004;
+        static long groupId = "urGroupId", ChannelId = "urChannelID";
         static List<KeyInfo> keys = new List<KeyInfo>();
         static List<UserKeyInfo> userKeyLogs = new List<UserKeyInfo>();
         static Dictionary<long, UserWaitState> userWaitStates = new Dictionary<long, UserWaitState>();
-        static ITelegramBotClient client = new TelegramBotClient("7650422582:AAFndJ39RJUAAtJykp__f6DmFlND_NJIgZg");
+        static ITelegramBotClient client = new TelegramBotClient("urBotToken");
         static async Task Main(string[] args)
         {
             keys = LoadKeysFromFile("keys.txt");
@@ -51,7 +51,7 @@ namespace Program
         }
 
         // Список ID администраторов
-        static List<long> adminIds = new List<long> { 1991980696, 1270527615 };
+        static List<long> adminIds = new List<long> { "urAdminId's" };
 
         //Булевый метод который возвращает айди админов
         static bool IsAdmin(long userId)
